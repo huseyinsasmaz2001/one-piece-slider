@@ -1,0 +1,97 @@
+html
+{
+  background-image: url(img/bg.svg);/* Nouvelle couleur de fond */
+  filter: saturate(80%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.slider {
+  display: flex;
+  overflow: hidden;
+  justify-content: center; /* Centrer les cartes */
+}
+
+.card {
+  width: 300px;
+  margin: 0 10px; /* Espacement entre les cartes */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-top: 25% ;
+  display: none;
+
+}
+.card:first-child {
+  display: block;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+  filter: saturate(230%);
+}
+
+.slider-container button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ef1f07; /* Couleur de fond */
+  color: #fff; /* Couleur du texte */
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px; /* Ajustement de la taille du bouton */
+  border-radius: 50%; /* Pour rendre le bouton rond */
+  font-size: 24px; /* Taille de la police */
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  outline: none; /* Supprimer la bordure de focus */
+}
+
+.prev {
+  left: 25%; /* Positionnement du bouton précédent à gauche */
+}
+
+.next {
+  right: 25%; /* Positionnement du bouton suivant à droite */
+}
+
+/* Effet de survol */
+.slider-container button:hover {
+  background-color: #070707; /* Couleur de fond au survol */
+  transform: translateY(-50%) scale(1.05); /* Effet de mise à l'échelle */
+}
+
+
+.character-info {
+  background-color: #ceb78b;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  display: none; /* Cacher la boîte au départ */
+  width: 300px; /* Largeur de la carte */
+}
+
+.character-info h2 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.character-info p {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
